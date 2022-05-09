@@ -1,0 +1,71 @@
+https://buildpack-registry.s3.amazonaws.com/buildpacks/mars/create-react-app.tgz
+
+[remote "heroku"]
+	url = https://git.heroku.com/comitiva.git
+	fetch = +refs/heads/*:refs/remotes/heroku/*
+[remote "github"]
+	url = https://github.com/raoever/comitiva-front.git
+	fetch = +refs/heads/*:refs/remotes/github/*
+
+
+// useEffect(
+	// 	async () => {
+	// 		await axios
+	// 			.get(`${process.env.REACT_APP_API_URL_LOCAL}/cadastro/`)
+	// 			.then(resp => {
+	// 				setData(resp.data);
+	// 			})
+	// 			.then(() => handleOldData()
+	// 			);
+	// 	},
+	// 	[handleOldData()]
+	// );
+
+
+
+    		resp.data.dependentes.forEach((dependente) => {
+        		Object.keys(dependente).forEach((key) => setValue(key, dependente[key]));
+        	});
+
+
+
+if (props.addDependente){
+								append({
+									nomeDependente: "",
+									parentesco: "",
+									nascimentoDependente: null,
+									turma: "",
+									estuda: "",
+									escolaridade: "",
+									tamanhoPe: "",
+									tamanhoCamisa: "",
+									tamanhoCalca: ""
+								});
+
+<Tooltip title="Open settings">
+							<IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+								<Avatar alt="Comitiva" src="logo.jpg" />
+							</IconButton>
+						</Tooltip>
+						<Menu
+							sx={{ mt: '45px' }}
+							id="menu-appbar"
+							anchorEl={anchorElUser}
+							anchorOrigin={{
+								vertical: 'top',
+								horizontal: 'right'
+							}}
+							keepMounted
+							transformOrigin={{
+								vertical: 'top',
+								horizontal: 'right'
+							}}
+							open={Boolean(anchorElUser)}
+							onClose={handleCloseUserMenu}
+						>
+							{settings.map(setting => (
+								<MenuItem key={setting} onClick={handleCloseUserMenu}>
+									<Typography textAlign="center">{setting}</Typography>
+								</MenuItem>
+							))}
+						</Menu>
