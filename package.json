@@ -30,7 +30,6 @@
     "wouter": "^2.8.0-alpha.2"
   },
   "scripts": {
-    "preinstall": "react-scripts --force",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
