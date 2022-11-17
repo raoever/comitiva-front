@@ -30,7 +30,7 @@
     "wouter": "^2.8.0-alpha.2"
   },
   "scripts": {
-    "install": "yarn install --ignore-optional",
+    "install": "react-scripts --force",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
