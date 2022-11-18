@@ -14,7 +14,7 @@ function App() {
 	if (isLoading) return <div>LOADING...</div>;
 	return (
 		<div>
-			{isAuthenticated ?
+			{!isAuthenticated ?
 				(
 					<CadastroLogin/>
 				)
