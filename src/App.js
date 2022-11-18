@@ -6,7 +6,7 @@ import {Route, Switch} from "wouter";
 import CadastroTable1 from "./pages/cadastro/CadastroTable1";
 import CadastroForm from "./pages/cadastro/CadastroForm";
 import Footer from "./components/Footer";
-import Logout from "./pages/login/Logout"
+import Logout from "./pages/login/Logout";
 
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
 	if (isLoading) return <div>LOADING...</div>;
 	return (
 		<div>
-			{!isAuthenticated ?
+			{isAuthenticated ?
 				(
 					<CadastroLogin/>
 				)

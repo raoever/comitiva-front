@@ -72,7 +72,7 @@ export default function CadastroForm(props) {
 				.post(`${process.env.REACT_APP_API_URL}/cadastro/familia`, familia)
 				.then(res => {
 					reset();
-					setLocation("/")
+					setLocation("/");
 					console.log(res.data);
 				});
 		} else {

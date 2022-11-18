@@ -23,24 +23,24 @@ function Copyright(props) {
 			align="center"
 			{...props}
 		>
-			{'Copyright © '}
+			{"Copyright © "}
 			<Link color="inherit" href="https://mui.com/">
 				Comitiva Esperança
-			</Link>{' '}
+			</Link>{" "}
 			{new Date().getFullYear()}
-			{'.'}
+			{"."}
 		</Typography>
 	);
 }
 
 const theme = createTheme();
 
-export default function SignInSide({ setToken }) {
-	const {loginWithPopup} = useAuth0()
+export default function SignInSide() { //{setToken}
+	const {loginWithPopup} = useAuth0();
 
 	return (
 		<>
-			<AppBar style={{ background: '#8C0707' }} position="static">
+			<AppBar style={{ background: "#8C0707"}} position="static">
 				<Container maxWidth="xl">
 					<Toolbar disableGutters>
 						<Typography
@@ -48,26 +48,26 @@ export default function SignInSide({ setToken }) {
 							variant="h2"
 							noWrap
 							component="div"
-							sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
+							sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
 						>
 							Comitiva Esperança
 						</Typography>
 
-						<Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }} />
+						<Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }} />
 						<Typography
 							fontFamily="CAC Pinafore"
 							variant="h2"
 							noWrap
 							component="div"
-							sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
+							sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
 						>
 							Comitiva Esperança
 						</Typography>
 						<Box
 							sx={{
 								flexGrow: 2,
-								display: { xs: 'none', md: 'flex' },
-								justifyContent: 'flex-start'
+								display: { xs: "none", md: "flex" },
+								justifyContent: "flex-start"
 							}}
 						/>
 					</Toolbar>
@@ -75,7 +75,7 @@ export default function SignInSide({ setToken }) {
 			</AppBar>
 
 			<ThemeProvider theme={theme}>
-				<Grid container component="main" sx={{ height: '100vh' }}>
+				<Grid container component="main" sx={{ height: "100vh" }}>
 					<CssBaseline />
 					<Grid
 						item
@@ -84,9 +84,9 @@ export default function SignInSide({ setToken }) {
 						md={8}
 						sx={{
 							backgroundImage: `url(${logo})`,
-							backgroundRepeat: 'no-repeat',
-							backgroundSize: 'auto',
-							backgroundPosition: 'center',
+							backgroundRepeat: "no-repeat",
+							backgroundSize: "auto",
+							backgroundPosition: "center",
 							marginTop: 3,
 						}}
 					/>
@@ -103,9 +103,9 @@ export default function SignInSide({ setToken }) {
 							sx={{
 								my: 6,
 								mx: 3,
-								display: 'flex',
-								flexDirection: 'column',
-								alignItems: 'center',
+								display: "flex",
+								flexDirection: "column",
+								alignItems: "center",
 								marginTop: 20,
 							}}
 						>

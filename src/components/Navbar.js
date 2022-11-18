@@ -99,7 +99,7 @@ const ResponsiveAppBar = () => {
 
 					<Box sx={{flexGrow: 0}}>
 						<Button color={"inherit"}
-								onClick={() => logout({returnTo: window.location.origin})}>Logout</Button>
+							onClick={() => logout({returnTo: window.location.origin})}>Logout</Button>
 					</Box>
 				</Toolbar>
 			</Container>
