@@ -20,7 +20,7 @@ function App() {
 					<main>
 						<Switch>
 							<Route path="/" component={CadastroTable1}/>
-							<Route path="/cadastro/" component={CadastroForm}/>
+							<Route path="/cadastro" component={CadastroForm}/>
 							<Route path="/cadastro/:id" component={CadastroForm}/>
 							<Route path="/logout" component={Logout}/>
 							<Route path="/login" component={CadastroLogin}/>
