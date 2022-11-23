@@ -66,7 +66,6 @@ export default function CadastroForm(props) {
 	});
 
 	const onSubmit = async familia => {
-		// console.log(familia);
 		if (!editando) {
 			axios
 				.post(`${process.env.REACT_APP_API_URL}/cadastro/familia`, familia)

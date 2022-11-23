@@ -14,27 +14,21 @@ function App() {
 	if (isLoading) return <div>LOADING...</div>;
 	return (
 		<div>
-			{!isAuthenticated ?
-				(
-					<CadastroLogin/>
-				)
-				:
-				(
-					<>
-						<Navbar/>
-						<main>
-							<Switch>
-								<Route path="/" component={CadastroTable1}/>
-								<Route path="/cadastro" component={CadastroForm}/>
-								<Route path="/cadastro/:id" component={CadastroForm}/>
-								<Route path="/logout" component={Logout}/>
-								<Route path="/login" component={CadastroLogin}/>
-							</Switch>
-						</main>
-						<Footer/>
-					</>
-				)
-			}
+			{!isAuthenticated ?(<CadastroLogin/>):(
+				<>
+					<Navbar/>
+					<main>
+						<Switch>
+							<Route path="/" component={CadastroTable1}/>
+							<Route path="/cadastro/" component={CadastroForm}/>
+							<Route path="/cadastro/:id" component={CadastroForm}/>
+							<Route path="/logout" component={Logout}/>
+							<Route path="/login" component={CadastroLogin}/>
+						</Switch>
+					</main>
+					<Footer/>
+				</>
+			)}
 		</div>
 	);
 }
