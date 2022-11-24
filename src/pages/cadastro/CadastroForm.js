@@ -108,6 +108,8 @@ export default function CadastroForm(props) {
 								tamanhoCalca: ""
 							});
 							setEDependente(true);
+						} else {
+						    setEDependente(true);
 						}
 						if (props.popupIdDep !== null && props.popupIdDep.length > 0) {
 							setEDependente(true);
