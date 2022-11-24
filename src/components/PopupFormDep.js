@@ -12,14 +12,18 @@ const PopupFormDep = props => {
 		setOpenPopupDep(false);
 	};
 
-
 	return (
 		<>
 			<Dialog open={openPopupDep} onClose={handleCloseDep}>
 				<DialogTitle>Editar Família</DialogTitle>
 				<DialogContent>
-
-
+                    <CadastroForm
+						popupId={popupId}
+						popupIdDep={popupIdDep}
+						setOpenPopup={setOpenPopup}
+						openPopup={openPopup}
+						addDependente={addDependente}
+					/>
 				</DialogContent>
 				<DialogActions>
 					<Button onClick={handleCloseDep}>Cancelar</Button>

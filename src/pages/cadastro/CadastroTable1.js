@@ -219,7 +219,7 @@ export default function CollapsibleTable() {
 									</Typography>
 									<IconButton
 										onClick={() => {
-											handlePopup(row._id, null, true);
+											handlePopup(row._id, null, true); //row._id, null, true
 											console.log("Adicionar Dependente.");
 										}}>
 										<AddCircleOutline/>
@@ -310,7 +310,7 @@ export default function CollapsibleTable() {
 													<TableCell align="right">
 														<IconButton
 															onClick={() => {
-																handlePopup(row._id, dependenteRow._id, false);
+																handlePopup(row._id, dependenteRow._id, true);
 															}}>
 															<Edit/>
 														</IconButton>

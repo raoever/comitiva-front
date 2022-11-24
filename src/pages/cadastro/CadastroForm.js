@@ -8,9 +8,9 @@ import Button from "@mui/material/Button";
 import {Remove} from "@mui/icons-material";
 import {Controller, useFieldArray, useForm} from "react-hook-form";
 import {FormHelperText, InputLabel, Select, TextField} from "@mui/material";
-import DatePicker from "@mui/lab/DatePicker";
-import {LocalizationProvider} from "@mui/lab";
-import AdapterDateFns from "@mui/lab/AdapterDateFns";
+import { DatePicker } from "@mui/x-date-pickers/DatePicker";
+import { LocalizationProvider } from "@mui/x-date-pickers";
+import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import brLocale from "date-fns/locale/pt-BR";
 import FormControl from "@mui/material/FormControl";
 import MenuItem from "@mui/material/MenuItem";
@@ -23,6 +23,7 @@ export default function CadastroForm(props) {
 	const [editando, setEditando] = useState(false);
 	const [popupId, setPopupId] = useState(false);
 	const [eDependente, setEDependente] = useState(false);
+
 	const {setOpenPopup} = props;
 	const [,setLocation] = useLocation();
 	const {control, handleSubmit, reset, setValue} = useForm({
@@ -58,7 +59,6 @@ export default function CadastroForm(props) {
 			]
 		}
 	});
-
 
 	const {fields, append, remove} = useFieldArray({
 		control,
@@ -156,7 +156,7 @@ export default function CadastroForm(props) {
 									defaultValue={new Date()}
 									render={({field}) => (
 										<LocalizationProvider
-											locale={brLocale}
+											adapterLocale={brLocale}
 											dateAdapter={AdapterDateFns}
 										>
 											<DatePicker
@@ -213,7 +213,7 @@ export default function CadastroForm(props) {
 									defaultValue={new Date()}
 									render={({field}) => (
 										<LocalizationProvider
-											locale={brLocale}
+											adapterLocale={brLocale}
 											dateAdapter={AdapterDateFns}
 										>
 											<DatePicker
@@ -288,7 +288,7 @@ export default function CadastroForm(props) {
 											defaultValue={new Date()}
 											render={({field}) => (
 												<LocalizationProvider
-													locale={brLocale}
+													adapterLocale={brLocale}
 													dateAdapter={AdapterDateFns}
 												>
 													<DatePicker
@@ -451,7 +451,6 @@ export default function CadastroForm(props) {
 							Adicionar Dependente
 						</Button>)
 					}
-
 					<br/>
 					<Box display="flex" justifyContent="flex-end">
 						<Button variant="outlined" type={"submit"}>
